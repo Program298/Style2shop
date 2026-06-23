@@ -1,50 +1,113 @@
-# Welcome to your Expo app 👋
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+# Style2shop
 
-## Get started
+แอปพลิเคชั่น เป็นโปรเจคในรายวิชา SCRIPTING LANGUAGE PROGRAMMING  ในชั้นปีที่ 2 ปี 2567  ซึ่งเป็นแอพพลิเคชั่นเกี่ยวกับการขายสินค้ามือ 2 โดยพัฒนาด้วย React Native  (Expo) และใช้ Database เป็น Firebase
 
-1. Install dependencies
+# Features
 
-   ```bash
-   npm install
-   ```
+###  ระบบจัดการบัญชีและผู้ใช้งาน
+**สมัครสมาชิก (Register):**  สามารถกรอกข้อมูลรายละเอียดต่างๆ และสามารถเลือกรูปภาพมาทำเป็นโปรไฟล์ได้
+**เข้าสู่ระบบ (Login) / ลืมรหัสผ่าน (Forgot Password):**  โดยมี Authentication ของ firebase  ในการยืนยันตัวตน
 
-2. Start the app
+### ระบบสำหรับผู้ซื้อ (Buyer Experience)
+- **หน้าแรก (Home Screen):** แสดงแถบสไลด์รูปแบนเนอร์โปรโมชัน และแยกหมวดหมู่สินค้าหลักอย่างชัดเจน (ผู้ชาย, ผู้หญิง, เด็ก)
+- **ค้นหาสินค้า (Real-time Search):** ค้นหาสินค้าด้วยชื่อและรายละเอียดสินค้า 
+- **รายละเอียดสินค้า (Product details):** โดยจะหน้าที่แสดงรายละเอียดของสินค้า และถ้าสินค้ามี ตำหนิ สามารถดูรูปภาพของตำหนิ ที่ทางผู้ขายใส่ไว้ได้
+-  **ตะกร้าสินค้า (Cart):** เลือกสินค้าใส่ตะกร้า และจัดการจำนวนหรือลบสินค้าที่ไม่ต้องการออกได้
+- **แผนที่ปักหมุดจัดส่ง (Map Checkout):** แสดงแผนที่ (Google Maps/Apple Maps ผ่าน react-native-maps) เพื่อเลือกจุดจัดส่ง และแปลงค่าพิกัดพิกัดเป็นที่อยู่จัดส่งให้อัตโนมัติ (Reverse Geocoding) และกรอกลงที่อยู่ให้หลังจากเลือก
+**ติดตามสถานะการจัดส่ง (Order History):** แสดงสถานะคำสั่งซื้อในปัจจุบัน และเก็บประวัติการสั่งซื้อที่สำเร็จแล้วทั้งหมด
 
-   ```bash
-    npx expo start
-   ```
+###  ระบบสำหรับผู้ขาย (Seller Management)
+**เพิ่มสินค้าใหม่ (Add Product):**
 
-In the output, you'll find options to open the app in a
+- ตั้งชื่อ, ใส่รายละเอียด, ตั้งราคา และเลือกหมวดหมู่เสื้อผ้า
+- เลือกระบุสภาพสินค้าว่าเป็น "สภาพดี" หรือ "มีตำหนิ"
+- หากระบุว่า "มีตำหนิ" สามารถอัปโหลดรูปภาพและอธิบายตำหนิแต่ละจุดแยกกันได้สูงสุด 5 จุด
+-  **จัดการสินค้าของตนเอง (Manage Products):** แสดงรายการสินค้าทั้งหมดที่เคยลงขาย พร้อมปุ่มสำหรับ "แก้ไขข้อมูลสินค้า" หรือ "ลบสินค้าออกจากหน้าร้าน"
+-  **จัดการออเดอร์ของลูกค้า (Order Management):** ตรวจสอบคำสั่งซื้อของสินค้าตนเอง และอัปเดตสถานะจัดส่ง (Pending ➔ Shipped ➔ Delivered ➔ Completed)
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+##  Tech Stack
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+*  **Frontend:** React Native (Expo SDK 51)
 
-## Get a fresh project
+*  **Database & Storage:** Firebase Firestore & Firebase Storage
 
-When you're ready, run:
+*  **Authentication:** Firebase Auth
 
+*  **Navigation:** Expo Router & React Navigation
+
+*  **Map & Location:** React Native Maps & Expo Location
+
+*  **Media Picker:** Expo Image Picker
+
+# Installation
+
+## Prerequisites
+ 
+| เครื่องมือ | เวอร์ชันที่รองรับ |
+ |---|---| 
+ | Node.js | >= v20.11.0 | 
+ | npm | >= 10.2.4 | 
+ | Expo CLI | >= 51.0.8 |
+  | Android Studio | (สำหรับ Android) |
+   | Xcode | (สำหรับ iOS, macOS เท่านั้น) |
+   
+
+## Installation steps
+
+**1. Clone repository**
 ```bash
-npm run reset-project
+git clone https://github.com/Program298/Style2shop.git
+cd signapp
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+**2. ติดตั้ง dependencies**
+```bash
+npm install
+```
 
-## Learn more
+**3. ตั้งค่า Firebase**
+- สร้างโปรเจกต์ใน [Firebase Console](https://console.firebase.google.com/)
+- ดาวน์โหลดไฟล์ `google-services.json` (Android) และ `GoogleService-Info.plist` (iOS)
+- วางไฟล์ไว้ที่:
+  - Android: `android/app/google-services.json`
+  - iOS: `ios/GoogleService-Info.plist`
 
-To learn more about developing your project with Expo, look at the following resources:
+**4. รันโปรเจกต์**
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+```bash
+# รันบน Android
+npm run android
 
-## Join the community
+# รันบน iOS
+npm run ios
 
-Join our community of developers creating universal apps.
+# รันบน Web
+npm run web
+```
+## Usage / Getting Started
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+
+แอปพลิเคชันถูกออกแบบมารองรับระบบ Marketplace สองฝั่ง (ผู้ซื้อ และ ผู้ขาย) ภายในบัญชีเดียว:
+
+###  สำหรับผู้ซื้อ (Buyer Flow)
+
+1.  **ลงทะเบียน & เข้าสู่ระบบ:**  สมัครสมาชิกและกรรอกรายละเอียดข้อมูลของตัวเองและโปรไฟล์
+2.  **ค้นหาและเลือกดูสินค้า:**  ไปที่หน้าแรกเลือกดูตามหมวดหมู่ หรือไปที่หน้า  **Search**  พิมพ์ชื่อสินค้าเพื่อหาเสื้อผ้าที่ต้องการ
+3.  **ตรวจสอบรายละเอียดสินค้าและตำหนิ:**  คลิกที่สินค้าเพื่อดูรายละเอียด หากสินค้ามีสภาพ  _"มีตำหนิ"_  ให้กดปุ่ม  **"ดูรายละเอียดตำหนิ"**  เพื่อดูภาพของจุดตำหนิ
+4.  **เพิ่มลงตะกร้า & สั่งซื้อ:**  กดปุ่ม  **"เพิ่มลงตะกร้า"**  จากนั้นไปที่ตะกร้าสินค้า กดปุ่ม  **"Proceed to Checkout"**
+5.  **ระบุพิกัดที่อยู่จัดส่ง:**  ในหน้าสั่งซื้อ กดปุ่มไอคอนแผนที่  เพื่อปักหมุดตำแหน่งปัจจุบันของคุณ ระบบจะแปลงค่าพิกัดเป็นที่อยู่ข้อความให้อัตโนมัติ จากนั้นกด  **"Place Order"**
+6.  **ติดตามสถานะ:**  ตรวจสอบความคืบหน้าของสินค้าที่สั่งได้ที่เมนู  **"ติดตามสินค้าซื้อ"**  และเมื่อสำเร็จแล้วดูประวัติย้อนหลังได้ในหน้า  **"ประวัติการสั่งซื้อ"**
+
+###  สำหรับผู้ขาย (Seller Flow)
+
+1.  **ลงขายสินค้าใหม่:**  ไปที่หน้าโปรไฟล์ของคุณ เลือกเมนู  **"เพิ่มสินค้า"**
+    -   กรอกข้อมูลสินค้าและเลือกหมวดหมู่
+    -   กำหนดสภาพสินค้า หากเลือกสภาพเป็น  _"มีตำหนิ"_  ให้ระบุจำนวนจุดชำรุด พร้อมถ่าย/อัปโหลดภาพประกอบและคำอธิบายตำหนิทีละจุด
+2.  **จัดการสินค้าของตนเอง:**  เข้าเมนู  **"จัดการสินค้า"**  เพื่อดูรายการสินค้าที่ตนเองวางขายอยู่ สามารถเลือก "แก้ไขข้อมูล" หรือกด "ลบสินค้า" ได้
+3.  **จัดการออเดอร์จากลูกค้า:**  เข้าเมนู  **"ติดตามสินค้าขาย"**  เพื่อดูออเดอร์ของลูกค้าที่กดซื้อสินค้าของเราเข้ามา ผู้ขายสามารถอัปเดตสถานะจัดส่งเป็น  **Shipped**  (จัดส่งแล้ว) ->  **Delivered**  (ถึงผู้รับ) และ  **Completed**  (เสร็จสิ้น) เมื่อส่งมอบเสร็จ
+
+
+
+
+
