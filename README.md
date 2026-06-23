@@ -58,7 +58,7 @@
 **1. Clone repository**
 ```bash
 git clone https://github.com/Program298/Style2shop.git
-cd signapp
+cd Style2shop
 ```
 
 **2. ติดตั้ง dependencies**
