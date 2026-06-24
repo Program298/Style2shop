@@ -108,6 +108,48 @@ npm run web
 3.  **จัดการออเดอร์จากลูกค้า:**  เข้าเมนู  **"ติดตามสินค้าขาย"**  เพื่อดูออเดอร์ของลูกค้าที่กดซื้อสินค้าของเราเข้ามา ผู้ขายสามารถอัปเดตสถานะจัดส่งเป็น  **Shipped**  (จัดส่งแล้ว) ->  **Delivered**  (ถึงผู้รับ) และ  **Completed**  (เสร็จสิ้น) เมื่อส่งมอบเสร็จ
 
 
+##  ภาพหน้าจอการใช้งานแอปพลิเคชัน (แบบคราวๆ)
+
+<table width="100%">
+  <!-- แถวที่ 1: หัวข้อหน้าจอ (3 คอลัมน์) -->
+  <tr>
+    <td align="center" width="33%"><b>หน้าเข้าสู่ระบบ (Login)</b></td>
+    <td align="center" width="33%"><b>หน้าหลัก (Home)</b></td>
+    <td align="center" width="33%"><b>หน้าค้นหาสินค้า (Search)</b></td>
+  </tr>
+  <!-- แถวที่ 1: รูปภาพหน้าจอ -->
+  <tr>
+    <td align="center">
+      <img src="https://github.com/user-attachments/assets/110dd83e-4ab6-4117-bd76-6b67b76caa2a" width="100%" alt="Login Screen"/>
+    </td>
+    <td align="center">
+      <img src="https://github.com/user-attachments/assets/b32476a4-73ac-4909-bcf6-3de5a51311f0" width="100%" alt="Home Screen"/>
+    </td>
+    <td align="center">
+      <img src="https://github.com/user-attachments/assets/7b3c1fe5-24e4-4dc2-93c7-94633e10f996" width="100%" alt="Search Screen"/>
+    </td>
+  </tr>
+  <!-- แถวที่ 2: หัวข้อหน้าจอ (2 คอลัมน์ - จัดกลุ่มไว้ตรงกลาง) -->
+  <tr>
+    <td align="center" width="33%"><b>หน้าจอฝั่งผู้ขายในการใส่ข้อมูลสินค้า</b></td>
+    <td align="center" width="33%"><b>การจัดการสินค้าผู้ขาย</b></td>
+    <td align="center" width="33%"><b>ฟน้าของตะกร้าสินค้า</b></td>
+  </tr>
+  <!-- แถวที่ 2: รูปภาพหน้าจอ -->
+  <tr>
+    <td align="center">
+      <img src="https://github.com/user-attachments/assets/e247463c-4b68-4d5c-8d95-8754d4c8f994" width="100%" alt="Product Details"/>
+    </td>
+    <td align="center">
+      <img src="https://github.com/user-attachments/assets/89d8c971-a1f3-45b3-b41f-c00d5cde1633" width="100%" alt="Seller Management"/>
+    </td>
+    <td align="center">
+      <img src="https://github.com/user-attachments/assets/87f83297-731e-47b7-a4a6-77a71992d59a" width="100%" alt="Seller Management"/>
+    </td>
+  </tr>
+</table>
+
+
 
 
 
