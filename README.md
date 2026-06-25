@@ -26,19 +26,24 @@
 -  **จัดการสินค้าของตนเอง (Manage Products):** แสดงรายการสินค้าทั้งหมดที่เคยลงขาย พร้อมปุ่มสำหรับ "แก้ไขข้อมูลสินค้า" หรือ "ลบสินค้าออกจากหน้าร้าน"
 -  **จัดการออเดอร์ของลูกค้า (Order Management):** ตรวจสอบคำสั่งซื้อของสินค้าตนเอง และอัปเดตสถานะจัดส่ง (Pending ➔ Shipped ➔ Delivered ➔ Completed)
 
-##  Tech Stack
+## Tech Stack
 
-*  **Frontend:** React Native (Expo SDK 51)
+* **Frontend:** React Native (Expo SDK 51) & TypeScript
 
-*  **Database & Storage:** Firebase Firestore & Firebase Storage
+* **Database & Storage:** Firebase Firestore & Firebase Storage (ใช้งานผ่าน Firebase JS SDK)
 
-*  **Authentication:** Firebase Auth
+* **Authentication:** Firebase Auth (ใช้งานผ่าน Firebase JS SDK)
 
-*  **Navigation:** Expo Router & React Navigation
+* **Navigation:** Expo Router & React Navigation (Drawer & Stack Navigation)
 
-*  **Map & Location:** React Native Maps & Expo Location
+* **Camera & Media Picker:** 
+  * **Real-time Camera:** React Native Vision Camera (สำหรับระบบกล้องวิดีโอตรวจจับแบบเรียลไทม์)
+  * **Image Picker:** Expo Image Picker (สำหรับเลือกรูปภาพ/ถ่ายรูปแปลภาษา)
 
-*  **Media Picker:** Expo Image Picker
+* **Real-time Communication:** WebSockets (สำหรับส่งเฟรมภาพไปยัง Server เพื่อประมวลผลโมเดล YOLOv5)
+
+* **Gestures & Animations:** React Native Gesture Handler & React Native Reanimated
+
 
 # Installation
 
@@ -46,11 +51,11 @@
  
 | เครื่องมือ | เวอร์ชันที่รองรับ |
  |---|---| 
- | Node.js | >= v20.11.0 | 
- | npm | >= 10.2.4 | 
- | Expo CLI | >= 51.0.8 |
-  | Android Studio | (สำหรับ Android) |
-   | Xcode | (สำหรับ iOS, macOS เท่านั้น) |
+ | Node.js | >= 18.x | 
+ | npm | >= 9.x | 
+ | Expo CLI | >= 51.x |
+ | Android Studio | (สำหรับ Android) |
+ | Xcode | (สำหรับ iOS, macOS เท่านั้น) |
    
 
 ## Installation steps
